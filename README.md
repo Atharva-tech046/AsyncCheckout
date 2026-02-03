@@ -1,4 +1,4 @@
-# 🚀 AsyncCheckout
+# 🛒 AsyncCheckout
 ### *A Distributed Event-Driven Order Orchestration System*
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
