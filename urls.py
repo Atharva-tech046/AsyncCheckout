@@ -1,13 +1,8 @@
-from django.urls import path
-from .views import OrderCreateView, OrderStatusView
-from . import views
+from django.contrib import admin
+from django.urls import path, include
+
 urlpatterns = [
-    # Path for creating a new order
-    path('', OrderCreateView.as_view(), name='order-create'),
-
-    # Path for checking an order status (Polling)
-    path('<int:pk>/status/', OrderStatusView.as_view(), name='order-status'),
-
-    # Path for listing all orders
-    path('all/', views.order_list, name='order-list'),
+    path('admin/', admin.site.urls),
+    # This empty string means it looks at the root of the site
+    path('', include('checkout_logic.urls')),
 ]
